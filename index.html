@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+          <button onclick="getAnimalData()"> 
+            Get animal data
+          </button>
+    </body>
+
+    <script>
+        //Promisified 
+        function getAnimalData(){
+           fetch("https://fakerapi.it/api/v1/persons").then(function(response){
+                response.json()
+                .then(function(finalData){
+                    console.log(finalData);
+                });
+                console.log(response.json);
+           });
+        }
+    </script> 
+</html>
